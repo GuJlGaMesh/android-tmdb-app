@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Designed and developed by 2019 skydoves (Jaewoong Eum)
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+      name="activity"
+      type="com.skydoves.themovies2.view.ui.details.movie.MovieDetailActivity" />
+
+    <variable
+      name="movie"
+      type="com.skydoves.themovies2.models.entity.Movie" />
+
+    <variable
+      name="viewModel"
+      type="com.skydoves.themovies2.view.ui.details.movie.MovieDetailViewModel" />
+
+    <variable
+      name="videoListAdapter"
+      type="com.skydoves.themovies2.view.adapter.VideoListAdapter" />
+
+    <variable
+      name="reviewListAdapter"
+      type="com.skydoves.themovies2.view.adapter.ReviewListAdapter" />
+  </data>
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="false">
+
+    <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appBarLayout"
+      android:layout_width="match_parent"
+      android:layout_height="280dp"
+      android:elevation="4dp"
+      tools:targetApi="LOLLIPOP">
+
+      <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:contentScrim="@color/colorPrimary"
+        app:expandedTitleGravity="top|left"
+        app:expandedTitleTextAppearance="@style/CollapsedExpandedTitleText"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/movie_detail_poster"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          app:bindBackDrop="@{movie}"
+          app:layout_collapseMode="parallax" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+          android:id="@+id/movie_detail_toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:layout_collapseMode="pin"
+          app:simpleToolbarTitle="@{movie.title}"
+          app:simpleToolbarWithHome="@{activity}" />
+      </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <include
+          android:id="@+id/detail_header"
+          layout="@layout/layout_movie_detail_header"
+          app:movie="@{movie}" />
+
+        <include
+          android:id="@+id/detail_body"
+          layout="@layout/layout_movie_detail_body"
+          app:movie="@{movie}"
+          app:reviewListAdapter="@{reviewListAdapter}"
+          app:videoListAdapter="@{videoListAdapter}"
+          app:viewModel="@{viewModel}" />
+
+      </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
