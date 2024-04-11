@@ -16,21 +16,40 @@
 
 package com.skydoves.themovies2.view.ui.main
 
+import android.app.Application
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.Observer
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.skydoves.themovies2.repository.AuthAppRepository
+import com.skydoves.themovies2.view.ui.loginregister.view.LoggedInFragment
+import com.skydoves.themovies2.view.ui.loginregister.view.LoginRegisterFragment
 
-class MainPagerAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
+class MainPagerAdapter(
+  fm: FragmentManager,
+  val lifecycle: Lifecycle,
+  application: Application,
+  val mainActivity: MainActivity
+) :
   FragmentStateAdapter(fm, lifecycle) {
-
+    private val vp: FragmentManager = fm
+private val app = application
+    private var isLoggedIn: Boolean = false;
   override fun createFragment(position: Int): Fragment {
+    val authAppRepository = AuthAppRepository(app)
+
+    authAppRepository.userLiveData.observe(mainActivity, Observer { firebaseUser ->
+      isLoggedIn = firebaseUser != null
+
+    })
     return when (position) {
       0 -> MovieListFragment()
       1 -> TvListFragment()
-      else -> PersonListFragment()
+      2 -> PersonListFragment()
+      else -> if (isLoggedIn) LoggedInFragment() else LoginRegisterFragment()
     }
   }
 
-  override fun getItemCount() = 3
+  override fun getItemCount() = 4
 }

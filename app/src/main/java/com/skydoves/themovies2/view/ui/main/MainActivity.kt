@@ -23,9 +23,11 @@ import com.skydoves.themovies2.databinding.ActivityMainBinding
 import com.skydoves.themovies2.extension.applyOnPageSelected
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
 
+  private var isLoggedIn: Boolean = false;
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     initializeUI()
@@ -33,14 +35,15 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
   private fun initializeUI() {
     with(binding.mainViewpager) {
-      adapter = MainPagerAdapter(supportFragmentManager, lifecycle)
-      offscreenPageLimit = 3
+      adapter = MainPagerAdapter(supportFragmentManager, lifecycle, application, this@MainActivity)
+      offscreenPageLimit = 4
       applyOnPageSelected { binding.mainBottomNavigation.menu.getItem(it).isChecked = true }
       binding.mainBottomNavigation.setOnNavigationItemSelectedListener {
         when (it.itemId) {
           R.id.action_one -> currentItem = 0
           R.id.action_two -> currentItem = 1
           R.id.action_three -> currentItem = 2
+          R.id.action_four -> currentItem = 3
         }
         true
       }

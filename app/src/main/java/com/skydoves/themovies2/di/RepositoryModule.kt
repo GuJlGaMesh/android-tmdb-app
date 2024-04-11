@@ -16,11 +16,13 @@
 
 package com.skydoves.themovies2.di
 
+import android.app.Application
 import com.skydoves.themovies2.api.service.MovieService
 import com.skydoves.themovies2.api.service.PeopleService
 import com.skydoves.themovies2.api.service.TheDiscoverService
 import com.skydoves.themovies2.api.service.TvService
 import com.skydoves.themovies2.repository.DiscoverRepository
+import com.skydoves.themovies2.repository.AuthAppRepository
 import com.skydoves.themovies2.repository.MovieRepository
 import com.skydoves.themovies2.repository.PeopleRepository
 import com.skydoves.themovies2.repository.TvRepository
@@ -45,6 +47,12 @@ object RepositoryModule {
     tvDao: TvDao
   ): DiscoverRepository {
     return DiscoverRepository(discoverService, movieDao, tvDao)
+  }
+
+  @Provides
+  @ViewModelScoped
+  fun provideAuthAppRepository(application: Application): AuthAppRepository {
+    return AuthAppRepository(application)
   }
 
   @Provides
