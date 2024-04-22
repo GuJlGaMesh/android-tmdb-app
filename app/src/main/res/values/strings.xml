@@ -1,8 +1,8 @@
 <resources>
-  <string name="app_name">Movie App</string>
-  <string name="menu_movie">Movie</string>
+  <string name="app_name">Films ratings</string>
+  <string name="menu_movie">Films</string>
   <string name="menu_tv">Tv</string>
-  <string name="menu_star">Star</string>
+  <string name="menu_star">Stars</string>
   <string name="profile">Profile</string>
   <string name="transition_profile">transition_profile</string>
   <string name="reviews">Reviews</string>

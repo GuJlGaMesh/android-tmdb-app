@@ -26,12 +26,13 @@
     android:src="@drawable/ic_arrow_back_white_24dp" />
 
   <TextView
-    android:id="@+id/toolbar_title"
-    style="@style/TextStyle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:ellipsize="end"
-    android:maxEms="15"
-    android:singleLine="true"
-    android:text="@string/app_name" />
+      android:id="@+id/toolbar_title"
+      style="@style/TextStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxEms="15"
+      android:singleLine="true"
+      android:text="@string/app_name"
+      android:textAlignment="textStart" />
 </androidx.appcompat.widget.Toolbar>

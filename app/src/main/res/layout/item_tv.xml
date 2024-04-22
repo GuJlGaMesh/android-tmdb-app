@@ -33,14 +33,14 @@
     android:orientation="vertical"
     tools:background="@color/background">
 
-    <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/item_tv_post"
-      android:layout_width="match_parent"
-      android:layout_height="240dp"
-      android:scaleType="fitXY"
-      app:loadPaletteImage="@{Api.getPosterPath(tv.poster_path)}"
-      app:loadPaletteTarget="@{itemTvPalette}"
-      tools:src="@drawable/ic_star_white_24dp" />
+    `<androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_tv_post"
+        android:layout_width="match_parent"
+        android:layout_height="239dp"
+        android:scaleType="fitXY"
+        app:loadPaletteImage="@{Api.getPosterPath(tv.poster_path)}"
+        app:loadPaletteTarget="@{itemTvPalette}"
+        tools:src="@drawable/ic_star_white_24dp" />
 
     <RelativeLayout
       android:layout_width="match_parent"
@@ -57,16 +57,16 @@
         android:orientation="vertical" />
 
       <TextView
-        android:id="@+id/item_tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="3dp"
-        android:text="@{tv.name}"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:text="title" />
+          android:id="@+id/item_tv_title"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:padding="3dp"
+          android:text="@{tv.name}"
+          android:textColor="@color/white"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          tools:text="title:" />
 
     </RelativeLayout>
 

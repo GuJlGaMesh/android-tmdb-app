@@ -31,18 +31,18 @@
     android:orientation="vertical">
 
     <TextView
-      android:id="@+id/detail_header_title"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:ellipsize="end"
-      android:gravity="center"
-      android:maxEms="12"
-      android:singleLine="true"
-      android:text="@{tv.name}"
-      android:textColor="@color/white"
-      android:textSize="27sp"
-      android:textStyle="bold"
-      tools:text="Star Wars: The Last Jedi" />
+        android:id="@+id/detail_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="12"
+        android:singleLine="true"
+        android:text="@{tv.name}"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        tools:text="Star Wars: The Last Jedi" />
 
     <TextView
       android:id="@+id/detail_header_release"
@@ -56,13 +56,13 @@
       tools:text="Release Date :" />
 
     <RatingBar
-      android:id="@+id/detail_header_star"
-      style="?android:attr/ratingBarStyleSmall"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="8dp"
-      android:rating="@{tv.vote_average / 2}"
-      tools:rating="3.5f" />
+        android:id="@+id/detail_header_star"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:rating="@{tv.vote_average / 2}"
+        tools:rating="3.5f" />
   </LinearLayout>
 </layout>
