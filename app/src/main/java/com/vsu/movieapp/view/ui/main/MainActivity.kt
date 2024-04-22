@@ -27,7 +27,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
           R.id.action_one -> currentItem = 0
           R.id.action_two -> currentItem = 1
           R.id.action_three -> currentItem = 2
-//          R.id.action_four -> currentItem = 3
+          R.id.action_four -> currentItem = 3
         }
         true
       }
