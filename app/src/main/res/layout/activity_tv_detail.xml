@@ -21,23 +21,23 @@
 
     <variable
       name="activity"
-      type="com.skydoves.themovies2.view.ui.details.tv.TvDetailActivity" />
+      type="com.vsu.movieapp.view.ui.details.tv.TvDetailActivity" />
 
     <variable
       name="tv"
-      type="com.skydoves.themovies2.models.entity.Tv" />
+      type="com.vsu.movieapp.models.entity.Tv" />
 
     <variable
       name="viewModel"
-      type="com.skydoves.themovies2.view.ui.details.tv.TvDetailViewModel" />
+      type="com.vsu.movieapp.view.ui.details.tv.TvDetailViewModel" />
 
     <variable
       name="videoAdapter"
-      type="com.skydoves.themovies2.view.adapter.VideoListAdapter" />
+      type="com.vsu.movieapp.view.adapter.VideoListAdapter" />
 
     <variable
       name="reviewAdapter"
-      type="com.skydoves.themovies2.view.adapter.ReviewListAdapter" />
+      type="com.vsu.movieapp.view.adapter.ReviewListAdapter" />
   </data>
 
   <androidx.coordinatorlayout.widget.CoordinatorLayout

@@ -21,11 +21,11 @@
 
     <variable
       name="viewModel"
-      type="com.skydoves.themovies2.view.ui.main.MainActivityViewModel" />
+      type="com.vsu.movieapp.view.ui.main.MainActivityViewModel" />
 
     <variable
       name="adapter"
-      type="com.skydoves.themovies2.view.adapter.TvListAdapter" />
+      type="com.vsu.movieapp.view.adapter.TvListAdapter" />
   </data>
 
   <RelativeLayout

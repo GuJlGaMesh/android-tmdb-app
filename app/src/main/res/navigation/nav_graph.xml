@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/loginRegisterFragment"
-        android:name="com.skydoves.themovies2.view.ui.loginregister.view.LoginRegisterFragment"
+        android:name="com.vsu.movieapp.view.ui.loginregister.view.LoginRegisterFragment"
         android:label="LoginRegisterFragment" >
         <action
             android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
@@ -13,7 +13,7 @@
     </fragment>
     <fragment
         android:id="@+id/loggedInFragment"
-        android:name="com.skydoves.themovies2.view.ui.loginregister.view.LoggedInFragment"
+        android:name="com.vsu.movieapp.view.ui.loginregister.view.LoggedInFragment"
         android:label="LoggedInFragment" >
         <action
             android:id="@+id/action_loggedInFragment_to_loginRegisterFragment"

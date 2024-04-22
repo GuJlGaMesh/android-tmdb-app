@@ -21,7 +21,7 @@
 
     <variable
       name="movie"
-      type="com.skydoves.themovies2.models.entity.Movie" />
+      type="com.vsu.movieapp.models.entity.Movie" />
   </data>
 
   <LinearLayout

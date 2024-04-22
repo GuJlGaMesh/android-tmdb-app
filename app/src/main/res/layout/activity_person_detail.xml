@@ -19,15 +19,15 @@
 
     <variable
       name="activity"
-      type="com.skydoves.themovies2.view.ui.details.person.PersonDetailActivity" />
+      type="com.vsu.movieapp.view.ui.details.person.PersonDetailActivity" />
 
     <variable
       name="person"
-      type="com.skydoves.themovies2.models.entity.Person" />
+      type="com.vsu.movieapp.models.entity.Person" />
 
     <variable
       name="viewModel"
-      type="com.skydoves.themovies2.view.ui.details.person.PersonDetailViewModel" />
+      type="com.vsu.movieapp.view.ui.details.person.PersonDetailViewModel" />
   </data>
 
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

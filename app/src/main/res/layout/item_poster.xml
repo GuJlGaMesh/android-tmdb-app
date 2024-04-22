@@ -19,11 +19,11 @@
 
   <data>
 
-    <import type="com.skydoves.themovies2.api.Api" />
+    <import type="com.vsu.movieapp.api.Api" />
 
     <variable
       name="movie"
-      type="com.skydoves.themovies2.models.entity.Movie" />
+      type="com.vsu.movieapp.models.entity.Movie" />
   </data>
 
   <RelativeLayout

@@ -19,11 +19,11 @@
 
   <data>
 
-    <import type="com.skydoves.themovies2.api.Api" />
+    <import type="com.vsu.movieapp.api.Api" />
 
     <variable
       name="review"
-      type="com.skydoves.themovies2.models.Review" />
+      type="com.vsu.movieapp.models.Review" />
 
   </data>
 

@@ -9,7 +9,7 @@ buildscript {
 
     ext {
         // sdk and tools
-        applicationId = 'com.skydoves.themovies2'
+        applicationId = 'com.vsu.movieapp'
         compileSdkVersion = 30
         minSdkVersion = 28
         targetSdkVersion = 30

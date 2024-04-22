@@ -19,11 +19,11 @@
 
   <data>
 
-    <import type="com.skydoves.themovies2.api.Api" />
+    <import type="com.vsu.movieapp.api.Api" />
 
     <variable
       name="video"
-      type="com.skydoves.themovies2.models.Video" />
+      type="com.vsu.movieapp.models.Video" />
   </data>
 
   <androidx.cardview.widget.CardView
